@@ -69,7 +69,7 @@ create table estado(
 create table parametro(
 	id BIGSERIAL NOT NULL,
 	nombre varchar(100) not null,
-	valor varchar(100) not null,
+	valor text not null,
 	idEstado bigint not null,
 	PRIMARY KEY (id)
 );

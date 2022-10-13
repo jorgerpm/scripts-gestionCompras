@@ -1,6 +1,6 @@
 insert into rol (nombre, idestado) values ('ADMINISTRADOR', 1);
 insert into usuario (nombre, usuario, clave, correo, idrol, idestado) 
-values ('Administrador', 'admin', 'admin', '', 1, 1);
+values ('Administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 1, 1);
 
 INSERT INTO parametro
 (id, nombre, valor, idEstado)
@@ -27,7 +27,7 @@ VALUES(7, 'MENSAJEMAIL_RC', 'Estimado [nombre]<br><br>Su nueva clave para accede
 insert into estado (nombre) values ('ACTIVO');
 insert into estado (nombre) values ('INACTIVO');
 
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (1, 'Administración', '', fa-cog, null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (1, 'Administración', '', 'fa-cog', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (2, 'Gestión roles', 'rol', 'fa-address-card-o', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (3, 'Gestión usuarios', 'usuario', 'fa-user-o', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (4, 'Cargar xml', 'cargarXml', 'fa-upload', null, 1);
