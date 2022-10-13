@@ -2,6 +2,7 @@ CREATE TABLE rol
 (
 	id BIGSERIAL NOT NULL,
    nombre varchar(100) not null,
+   principal bool NOT NULL,
    idEstado BIGINT not null,
    PRIMARY KEY (id)
 );
