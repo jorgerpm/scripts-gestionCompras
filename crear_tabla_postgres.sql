@@ -16,6 +16,7 @@ CREATE TABLE usuario
    idRol bigint not null,
    idEstado bigint not null,
    PRIMARY KEY (id)
+   CONSTRAINT usuario_usuario_key UNIQUE (usuario)
 );
 
 CREATE TABLE menu
@@ -78,5 +79,6 @@ create table proveedor(
 	nombre varchar(100) not null,
 	ruc varchar(100) not null,
 	codigoJD varchar(100),
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	CONSTRAINT proveedor_ruc_key UNIQUE (ruc)
 );
