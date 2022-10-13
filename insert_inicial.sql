@@ -31,7 +31,7 @@ INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (1, 'Adminis
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (2, 'Gestión roles', 'rol', 'fa-address-card-o', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (3, 'Gestión usuarios', 'usuario', 'fa-user-o', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (4, 'Cargar xml', 'cargarXml', 'fa-upload', null, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (5, 'Gestión proveedor', 'proveedor', 'fa-truck', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (5, 'Gestión proveedores', 'proveedor', 'fa-truck', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (6, 'Gestión parámetros', 'parametro', 'fa-bookmark-o', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (7, 'Consultar facturas', 'archivoXml', 'fa-calculator', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (8, 'Asignación de permisos', 'menuRol', 'fa-unlock', 1, 1);
