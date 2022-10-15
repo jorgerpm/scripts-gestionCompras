@@ -16,16 +16,34 @@ INSERT INTO parametro
 VALUES(4, 'CLAVEMAIL', '', 1);
 INSERT INTO parametro
 (id, nombre, valor, idEstado)
-VALUES(5, 'REMITENTEMAIL_RC', 'Pruebas xml', 1);
-INSERT INTO parametro
-(id, nombre, valor, idEstado)
-VALUES(6, 'ASUNTOMAIL_RC', 'Recuperación de contraseña', 1);
-INSERT INTO parametro
-(id, nombre, valor, idEstado)
-VALUES(7, 'MENSAJEMAIL_RC', 'Estimado [nombre]<br><br>Su nueva clave para acceder al portal es: [clave]<br><br><hr>Saludos', 1);
+VALUES(5, 'NOMBREREMITENTEMAIL', 'Pruebas xml', 1);
 
-insert into estado (nombre) values ('ACTIVO');
-insert into estado (nombre) values ('INACTIVO');
+INSERT INTO parametro
+(id, nombre, valor, idEstado)
+VALUES(6, 'ALIASMAIL', 'pruebas@xml.com', 1);
+
+INSERT INTO parametro
+(id, nombre, valor, idEstado)
+VALUES(7, 'ASUNTOMAIL_RC', 'Recuperación de contraseña', 1);
+INSERT INTO parametro
+(id, nombre, valor, idEstado)
+VALUES(8, 'MENSAJEMAIL_RC', 'Estimado [nombre]<br><br>Su nueva clave para acceder al portal es: [clave]<br><br><hr>Saludos.', 1);
+
+INSERT INTO parametro
+(id, nombre, valor, idEstado)
+VALUES(9, 'ASUNTOMAIL_CA', 'Factura cargada al sistema', 1);
+INSERT INTO parametro
+(id, nombre, valor, idEstado)
+VALUES(10, 'MENSAJEMAIL_CA', 'Estimados, <br>El usuario [nombre] acaba de realizar la carga de una factura xml en el sistema.<br><hr>Saludos.', 1);
+
+INSERT INTO parametro
+(id, nombre, valor, idEstado)
+VALUES(11, 'DESTINOMAIL_CA', 'jorge.ponce@idebsystems.com', 1);
+
+
+
+insert into estado (id, nombre) values (1, 'ACTIVO');
+insert into estado (id, nombre) values (2, 'INACTIVO');
 
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (1, 'Administración', '', 'fa-cog', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (2, 'Gestión roles', 'rol', 'fa-address-card-o', 1, 1);

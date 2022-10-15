@@ -47,6 +47,7 @@ create table archivoxml(
 	estado varchar(100),
 	autorizacion varchar(100) not NULL,
 	fechaAutorizacion timestamp,
+	fechaEmision timestamp,
 	ambiente varchar(100),
 	comprobante text,
 	urlArchivo varchar(200),
