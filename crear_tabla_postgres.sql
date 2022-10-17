@@ -16,7 +16,7 @@ CREATE TABLE usuario
    correo varchar(100) not null,
    idRol bigint not null,
    idEstado bigint not null,
-   PRIMARY KEY (id)
+   PRIMARY KEY (id),
    CONSTRAINT usuario_usuario_key UNIQUE (usuario)
 );
 
@@ -38,28 +38,6 @@ CREATE TABLE menurol
    idRol bigint not null,
    PRIMARY KEY (id)
 );
-
-
-
-create table archivoxml(
-	id BIGSERIAL NOT NULL,
-	tipoDocumento varchar(100),
-	estado varchar(100),
-	autorizacion varchar(100) not NULL,
-	fechaAutorizacion timestamp,
-	fechaEmision timestamp,
-	ambiente varchar(100),
-	comprobante text,
-	urlArchivo varchar(200),
-	nombreArchivoXml varchar(100),
-	nombreArchivoPdf varchar(100),
-	idUsuarioCarga bigint,
-	fechaCarga timestamp,
-	idProveedor bigint,
-	PRIMARY KEY (id),
-	CONSTRAINT archivoxml_autorizacion_key UNIQUE (autorizacion)
-);
-
 
 create table estado(
 	id BIGSERIAL NOT NULL,
