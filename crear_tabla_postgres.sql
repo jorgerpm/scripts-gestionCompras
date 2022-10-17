@@ -63,6 +63,7 @@ create table proveedor(
 	correo varchar(50) not null,
 	ruc varchar(100) not null,
 	codigoJD varchar(100),
+	idEstado bigint not null,
 	PRIMARY KEY (id),
 	CONSTRAINT proveedor_ruc_key UNIQUE (ruc)
 );
