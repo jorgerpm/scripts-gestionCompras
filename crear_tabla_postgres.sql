@@ -56,7 +56,11 @@ create table parametro(
 
 create table proveedor(
 	id BIGSERIAL NOT NULL,
-	nombre varchar(100) not null,
+	nombreComercial varchar(100) not null,
+	razonSocial varchar(100) not null,
+	direccion varchar(100),
+	telefono varchar(15),
+	correo varchar(50),
 	ruc varchar(100) not null,
 	codigoJD varchar(100),
 	PRIMARY KEY (id),
