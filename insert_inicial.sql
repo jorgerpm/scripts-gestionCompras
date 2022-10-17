@@ -1,4 +1,4 @@
-insert into rol (nombre, principal, idestado) values ('ADMINISTRADOR', true, 1);
+insert into rol (id, nombre, principal, idestado) values (1, 'ADMINISTRADOR', true, 1);
 insert into usuario (nombre, usuario, clave, correo, idrol, idestado) 
 values ('Administrador', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 1, 1);
 
