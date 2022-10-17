@@ -67,3 +67,14 @@ create table proveedor(
 	PRIMARY KEY (id),
 	CONSTRAINT proveedor_ruc_key UNIQUE (ruc)
 );
+
+create table producto(
+	id BIGSERIAL not null,
+	codigoProducto varchar(100) not null,
+	nombre varchar(100) not null,
+	valorUnitario numeric(9,2) not null,
+	tieneIva boolean,
+	idEstado bigint not null,
+	PRIMARY KEY (id),
+	CONSTRAINT producto_codigoProducto_key UNIQUE (codigoProducto)
+);
