@@ -79,3 +79,10 @@ create table producto(
 	PRIMARY KEY (id),
 	CONSTRAINT producto_codigoProducto_key UNIQUE (codigoProducto)
 );
+
+create table formaPago(
+	id BIGSERIAL NOT NULL,
+	nombre varchar(100) not null,
+	idEstado BIGINT not null,
+	PRIMARY KEY (id)
+)
