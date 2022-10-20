@@ -51,6 +51,8 @@ INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (5, 'Gestió
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (6, 'Asignación de permisos', 'menuRol', 'fa-unlock', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (7, 'Gestión productos', 'producto', 'fa-cube', 1, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (8, 'Orden servicio-producto', 'ordenServicioProducto', 'fa-pagelines', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (9, 'Solicitud cotización', 'solicitudCotizacion', 'fa-calculator', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (10, 'Formulario cotización', 'formularioPorCotizacion', 'fa-calculator', null, 1);
 
 insert into menurol(idrol, idmenu) values (1, 1);
 insert into menurol(idrol, idmenu) values (1, 2);
@@ -60,3 +62,5 @@ insert into menurol(idrol, idmenu) values (1, 5);
 insert into menurol(idrol, idmenu) values (1, 6);
 insert into menurol(idrol, idmenu) values (1, 7);
 insert into menurol(idrol, idmenu) values (1, 8);
+insert into menurol(idrol, idmenu) values (1, 9);
+insert into menurol(idrol, idmenu) values (1, 10);
