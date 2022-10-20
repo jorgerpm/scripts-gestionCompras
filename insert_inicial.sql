@@ -1,4 +1,5 @@
 insert into rol (id, nombre, principal, idestado) values (1, 'ADMINISTRADOR', true, 1);
+insert into rol (id, nombre, principal, idestado) values (2, 'PROVEEDOR', true, 1);
 
 -- colocar en 2 la secuencia del rol
 ALTER SEQUENCE public.rol_id_seq RESTART 2;
