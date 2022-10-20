@@ -86,3 +86,26 @@ create table formaPago(
 	idEstado BIGINT not null,
 	PRIMARY KEY (id)
 )
+
+
+create table solicitud(
+id bigserial not null,
+codigo_solicitud text not null,
+fecha_solicitud timestamp not null,
+codigo_rc text,
+estado text not null,
+usuario text not null,
+correos text,
+observacion text,
+CONSTRAINT solicitud_pkey PRIMARY KEY (id),
+CONSTRAINT solicitud_codigo_solicitud_uk UNIQUE (codigo_solicitud)
+);
+
+create table solicitud_detalle(
+id bigserial not null,
+id_solicitud bigint not null,
+cantidad int not null,
+detalle text not null,
+CONSTRAINT solicitud_detalle_pkey PRIMARY KEY (id)
+);
+
