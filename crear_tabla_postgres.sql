@@ -90,15 +90,14 @@ create table formaPago(
 
 create table solicitud(
 id bigserial not null,
-codigo_solicitud text not null,
+codigo_rc text not null,
 fecha_solicitud timestamp not null,
-codigo_rc text,
 estado text not null,
 usuario text not null,
 correos text,
 observacion text,
 CONSTRAINT solicitud_pkey PRIMARY KEY (id),
-CONSTRAINT solicitud_codigo_solicitud_uk UNIQUE (codigo_solicitud)
+CONSTRAINT solicitud_codigo_rc_uk UNIQUE (codigo_rc)
 );
 
 create table solicitud_detalle(
@@ -109,3 +108,33 @@ detalle text not null,
 CONSTRAINT solicitud_detalle_pkey PRIMARY KEY (id)
 );
 
+
+create table cotizacion(
+id bigserial not null,
+fecha_cotizacion timestamp not null,
+codigo_rc text not null,
+codigo_cotizacion text not null,
+estado text not null,
+usuario text not null,
+id_proveedor bigint not null,
+observacion text,
+subtotal numeric(9,2) not null,
+subtotal_sin_iva numeric(9,2) not null,
+iva numeric(9,2) not null,
+total numeric(9,2) not null,
+descuento numeric(9,2) not null default 0,
+CONSTRAINT cotizacion_pkey PRIMARY KEY (id),
+CONSTRAINT cotizacion_codigo_cotizacion_uk UNIQUE (codigo_cotizacion)
+);
+
+create table cotizacion_detalle(
+id bigserial not null,
+id_cotizacion bigint not null,
+cantidad int not null,
+detalle text not null,
+valor_unitario numeric(9,2) not null,
+valor_total numeric(9,2) not null,
+tiene_iva boolean,
+observacion text,
+CONSTRAINT cotizacion_detalle_pkey PRIMARY KEY (id)
+);
