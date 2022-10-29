@@ -39,10 +39,14 @@ INSERT INTO parametro
 VALUES(9, 'ASUNTOMAIL_SC', 'Solicitud de cotizacion provedor', 1);
 INSERT INTO parametro
 (id, nombre, valor, idEstado)
-VALUES(10, 'MENSAJEMAIL_SC', 'Estimado proveedor, <br>A continuación se solicita una cotización.<br><hr>Saludos.', 1);
+VALUES(10, 'MENSAJEMAIL_SC', 'Estimado proveedor, <br>A continuación se solicita una cotización.<br>Para acceder a la solicitud de cotización, por favor ingrese al siguiente link <a href="[url]">[url]</a><br>Deberá acceder al portal con su usuario y clave, si es el caso de no estar registrado en el portal, deberá registrar sus datos dentro del mismo link.<br><hr>Saludos.', 1);
+-- Auto-generated SQL script #202210271952
+INSERT INTO parametro (id,nombre,valor,idestado)
+	VALUES (11,'IP_SISTEMA','http://localhost:9090/php-gestionCompras/',1);
+
 
 -- colocar la secuencia de parametros en el siguiente que corresponde
-ALTER SEQUENCE public.parametro_id_seq RESTART 10;
+ALTER SEQUENCE public.parametro_id_seq RESTART 11;
 
 insert into estado (id, nombre) values (1, 'ACTIVO');
 insert into estado (id, nombre) values (2, 'INACTIVO');
