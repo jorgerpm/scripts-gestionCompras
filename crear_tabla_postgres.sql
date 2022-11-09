@@ -17,7 +17,8 @@ CREATE TABLE usuario
    idRol bigint not null,
    idEstado bigint not null,
    PRIMARY KEY (id),
-   CONSTRAINT usuario_usuario_key UNIQUE (usuario)
+   CONSTRAINT usuario_usuario_key UNIQUE (usuario),
+   CONSTRAINT usuario_correo_key UNIQUE (correo)
 );
 
 CREATE TABLE menu
@@ -141,4 +142,48 @@ valor_total numeric(9,2) not null,
 tiene_iva boolean,
 observacion text,
 CONSTRAINT cotizacion_detalle_pkey PRIMARY KEY (id)
+);
+
+create table solicitud_envio(
+id bigserial not null,
+id_solictud bigint not null,
+numero_rc text not null,
+usuario_envia text not null,
+fecha_envia timestamp not null,
+correos_envia text not null,
+url text,
+CONSTRAINT solicitud_envio_pkey PRIMARY KEY (id)
+);
+
+
+
+create table orden_compra(
+id bigserial not null,
+fecha_orden_compra timestamp not null,
+codigo_rc text not null,
+codigo_orden_compra text not null,
+estado text not null,
+usuario text not null,
+ruc_proveedor text not null,
+observacion text,
+subtotal numeric(9,2) not null,
+subtotal_sin_iva numeric(9,2) not null,
+iva numeric(9,2) not null,
+total numeric(9,2) not null,
+descuento numeric(9,2) not null default 0,
+forma_pago text,
+CONSTRAINT orden_compra_pkey PRIMARY KEY (id),
+CONSTRAINT orden_compra_codigo_orden_compra_uk UNIQUE (codigo_orden_compra)
+);
+
+create table orden_compra_detalle(
+id bigserial not null,
+id_orden_compra bigint not null,
+cantidad int not null,
+detalle text not null,
+valor_unitario numeric(9,2) not null,
+valor_total numeric(9,2) not null,
+tiene_iva boolean,
+observacion text,
+CONSTRAINT orden_compra_detalle_pkey PRIMARY KEY (id)
 );
