@@ -187,3 +187,14 @@ tiene_iva boolean,
 observacion text,
 CONSTRAINT orden_compra_detalle_pkey PRIMARY KEY (id)
 );
+
+create table autorizacion_orden_compra(
+id bigserial not null,
+id_orden_compra bigint not null,
+id_usuario bigint not null,
+fecha_autoriza timestamp,
+usuario_autoriza text,
+estado text,
+observacion text,
+PRIMARY KEY (id) 
+);
