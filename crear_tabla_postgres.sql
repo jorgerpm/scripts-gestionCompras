@@ -97,6 +97,8 @@ estado text not null,
 usuario text not null,
 correos text,
 observacion text,
+usuario_modifica text,
+fecha_modifica timestamp,
 CONSTRAINT solicitud_pkey PRIMARY KEY (id),
 CONSTRAINT solicitud_codigo_rc_uk UNIQUE (codigo_rc)
 );
@@ -128,6 +130,8 @@ tiempo_entrega text,
 validez_cotizacion text,
 forma_pago text,
 adicionales text,
+usuario_modifica text,
+fecha_modifica timestamp,
 CONSTRAINT cotizacion_pkey PRIMARY KEY (id),
 CONSTRAINT cotizacion_codigo_cotizacion_uk UNIQUE (codigo_cotizacion)
 );
@@ -172,6 +176,8 @@ iva numeric(9,2) not null,
 total numeric(9,2) not null,
 descuento numeric(9,2) not null default 0,
 forma_pago text,
+usuario_modifica text,
+fecha_modifica timestamp,
 CONSTRAINT orden_compra_pkey PRIMARY KEY (id),
 CONSTRAINT orden_compra_codigo_orden_compra_uk UNIQUE (codigo_orden_compra)
 );
