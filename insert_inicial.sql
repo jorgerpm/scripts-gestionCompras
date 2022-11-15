@@ -65,6 +65,7 @@ INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (11, 'Forma 
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (12, 'Lista de solicitudes', 'listaSolicitudes', '', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (13, 'Lista de cotizaciones', 'listaCotizaciones', '', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (14, 'Lista de orden de compra', 'listaOrdenesCompra', '', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (15, 'Histórico de documentos', 'listaHistoricoDocumentos', '', null, 1);
 
 insert into menurol(idrol, idmenu) values (1, 1);
 insert into menurol(idrol, idmenu) values (1, 2);
@@ -80,3 +81,4 @@ insert into menurol(idrol, idmenu) values (1, 11);
 insert into menurol(idrol, idmenu) values (1, 12);
 insert into menurol(idrol, idmenu) values (1, 13);
 insert into menurol(idrol, idmenu) values (1, 14);
+insert into menurol(idrol, idmenu) values (1, 15);
