@@ -4,6 +4,7 @@ CREATE TABLE rol
    nombre varchar(100) not null,
    principal boolean NOT NULL,
    idEstado BIGINT not null,
+   cheklist_recepcion boolean NOT NULL default false,
    PRIMARY KEY (id)
 );
 
@@ -57,15 +58,22 @@ create table parametro(
 
 create table proveedor(
 	id BIGSERIAL NOT NULL,
+	ruc varchar(100) not null,
 	nombreComercial varchar(100),
 	razonSocial varchar(100) not null,
 	direccion varchar(100),
 	telefono1 varchar(15) not null,
 	telefono2 varchar(15),
+	contacto text,
 	correo varchar(50) not null,
-	ruc varchar(100) not null,
+	contabilidad text,
+	telefono_contabilidad text,
+	correo_contabilidad text,
 	codigoJD varchar(100),
 	idEstado bigint not null,
+	carpeta text,
+	servicio_producto text,
+	credito text,
 	PRIMARY KEY (id),
 	CONSTRAINT proveedor_ruc_key UNIQUE (ruc)
 );
@@ -91,16 +99,20 @@ create table formaPago(
 
 create table solicitud(
 id bigserial not null,
+codigo_solicitud text not null,
 codigo_rc text not null,
 fecha_solicitud timestamp not null,
 estado text not null,
 usuario text not null,
 correos text,
 observacion text,
+monto_aprobado_rc numeric(9,2),
+fecha_autoriza_rc timestamp,
+estado_rc text,
 usuario_modifica text,
 fecha_modifica timestamp,
 CONSTRAINT solicitud_pkey PRIMARY KEY (id),
-CONSTRAINT solicitud_codigo_rc_uk UNIQUE (codigo_rc)
+CONSTRAINT solicitud_codigo_sol_uk UNIQUE (codigo_solicitud)
 );
 
 create table solicitud_detalle(
@@ -115,8 +127,9 @@ CONSTRAINT solicitud_detalle_pkey PRIMARY KEY (id)
 create table cotizacion(
 id bigserial not null,
 fecha_cotizacion timestamp not null,
-codigo_rc text not null,
 codigo_cotizacion text not null,
+codigo_solicitud text not null,
+codigo_rc text not null,
 estado text not null,
 usuario text not null,
 ruc_proveedor text not null,
@@ -164,8 +177,9 @@ CONSTRAINT solicitud_envio_pkey PRIMARY KEY (id)
 create table orden_compra(
 id bigserial not null,
 fecha_orden_compra timestamp not null,
-codigo_rc text not null,
 codigo_orden_compra text not null,
+codigo_rc text not null,
+codigo_solicitud text not null,
 estado text not null,
 usuario text not null,
 ruc_proveedor text not null,
@@ -204,3 +218,85 @@ estado text,
 observacion text,
 PRIMARY KEY (id) 
 );
+
+
+
+CREATE TABLE historial_documentos (
+	id bigserial NOT NULL,
+	id_documento int8 NOT NULL,
+	documento text NOT NULL,
+	codigo_solicitud text,
+	codigo_rc text,
+	estado text,
+	fecha_cambio timestamp,
+	usuario_cambio text,
+	valor_total numeric(9, 2) DEFAULT 0,
+	observacion text,
+	CONSTRAINT historial_documentos_pkey PRIMARY KEY (id)
+);
+
+
+create table comparativo(
+	id bigserial not null,
+	id_solicitud bigint not null,
+	codigo_solicitud text not null,
+	codigo_comparativo text,
+	fecha_comparativo timestamp,
+	usuario text,
+	estado text,
+	observacion text,
+	usuario_modifica bigint,
+	fecha_modifica timestamp,
+	PRIMARY KEY (id)
+);
+
+create table comparativo_detalle(
+	id bigserial not null,
+	id_comparativo bigint not null,
+	id_cotizacion bigint not null,
+	seleccionada boolean not null default false,
+	PRIMARY KEY (id)
+);
+
+
+
+create table check_list_recepcion(
+	id bigserial not null,
+	id_solicitud bigint not null,
+	id_orden_compra bigint not null,
+	codigo_solicitud text not null,
+	fecha_recepcion timestamp not null,
+	estado text not null,
+	usuario text not null,
+	fecha_recepcion_bodega timestamp,
+	codigo_material text,
+	cantidad_recibida integer,
+	usuario_modifica text,
+	fecha_modifica timestamp,
+	PRIMARY KEY (id)
+);
+
+create table check_list_recepcion_detalle(
+	id bigserial not null,
+	id_check_list_recepcion bigint not null,
+	id_rol bigint not null,
+	id_usuario bigint not null,
+	pregunta text,
+	respuesta text,
+	fecha timestamp,
+	observacion text,
+	PRIMARY KEY (id)
+);
+
+
+create table pregunta_check_list_recepcion(
+	id bigserial not null,
+	id_rol bigint not null,
+	pregunta text,
+	idEstado bigint not null,
+	fecha_modifica timestamp,
+	usuario_modifica bigint,
+	PRIMARY KEY (id)
+);
+
+
