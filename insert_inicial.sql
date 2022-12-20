@@ -50,21 +50,23 @@ INSERT INTO parametro (id,nombre,valor,idestado) VALUES (12,'PATH_REPORTES','/ho
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(13, 'ASUNTOMAIL_OC_APR', 'Cotización / OC aprobada', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
 VALUES(14, 'MENSAJEMAIL_OC_APR', 'Estimado proveedor, <br>Su cotización con número de solicitud: [codigoSolicitud], ha sido aprobada.<br><hr>Saludos.', 1);
-INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(15, 'CORREOS_OC_APR', 'jorge.ponce@idebsystems.com', 1);
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(15, 'MAILS_OC_APR', 'jorge.ponce@idebsystems.com', 1);
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(16, 'ASUNTOMAIL_APROBADORES', 'Orden de compra para su aprobación', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
 VALUES(17, 'MENSAJEMAIL_APROBADORES', 'Estimado [nombreUsuario], <br>Se ha generado la siguiente orden de compra con número de solicitud: [codigoSolicitud], y está pendiente de su aprobación.<br>Debe ingresar al sistema con su usuario y clave y buscar la orden de compra en la opción: Ordenes por autorizar.<br><hr>Saludos.', 1);
-INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(18, 'CORREOS_APROBADORES', 'jorge.ponce@idebsystems.com', 1);
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(18, 'MAILS_APROBADORES', 'jorge.ponce@idebsystems.com', 1);
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(19, 'ASUNTOMAIL_CHECKLIST_RECEPCION', 'Orden de compra para su recepción', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
 VALUES(20, 'MENSAJEMAIL_CHECKLIST_RECEPCION', 'Estimado [nombreUsuario], <br>Se ha generado la siguiente orden de compra con código de solicitud: [codigoSolicitud], y está pendiente para su recepción.<br>Debe ingresar al sistema con su usuario y clave y buscar la orden de compra en la opción: Lista checklist recepción.<br><hr>Saludos.', 1);
 
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(21, 'CODIGO_SOLICITUD', '1', 1);
+
 
 
 -- colocar la secuencia de parametros en el siguiente que corresponde
-ALTER SEQUENCE public.parametro_id_seq RESTART 20;
+ALTER SEQUENCE public.parametro_id_seq RESTART 21;
 
 
 insert into estado (id, nombre) values (1, 'ACTIVO');
