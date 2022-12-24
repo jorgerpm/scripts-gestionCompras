@@ -54,12 +54,12 @@ INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(15, 'MAILS_OC_APR', '
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(16, 'ASUNTOMAIL_APROBADORES', 'Orden de compra para su aprobación', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
-VALUES(17, 'MENSAJEMAIL_APROBADORES', 'Estimado [nombreUsuario], <br>Se ha generado la siguiente orden de compra con número de solicitud: [codigoSolicitud], y está pendiente de su aprobación.<br>Debe ingresar al sistema con su usuario y clave y buscar la orden de compra en la opción: Ordenes por autorizar.<br><hr>Saludos.', 1);
+VALUES(17, 'MENSAJEMAIL_APROBADORES', 'Estimado [nombreUsuario], <br>Se ha generado la siguiente orden de compra con número de solicitud: [codigoSolicitud], y está pendiente de su aprobación.<br>Debe ingresar al sistema con su usuario y clave, a través del siguiente link <a href="[url]">[url]</a>, y buscar la orden de compra en la opción: Ordenes por autorizar.<br><hr>Saludos.', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(18, 'MAILS_APROBADORES', 'jorge.ponce@idebsystems.com', 1);
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(19, 'ASUNTOMAIL_CHECKLIST_RECEPCION', 'Orden de compra para su recepción', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
-VALUES(20, 'MENSAJEMAIL_CHECKLIST_RECEPCION', 'Estimado [nombreUsuario], <br>Se ha generado la siguiente orden de compra con código de solicitud: [codigoSolicitud], y está pendiente para su recepción.<br>Debe ingresar al sistema con su usuario y clave y buscar la orden de compra en la opción: Lista checklist recepción.<br><hr>Saludos.', 1);
+VALUES(20, 'MENSAJEMAIL_CHECKLIST_RECEPCION', 'Estimado [nombreUsuario], <br>Se ha generado la siguiente orden de compra con código de solicitud: [codigoSolicitud], y está pendiente para su recepción.<br>Debe ingresar al sistema con su usuario y clave, a través del siguiente link <a href="[url]">[url]</a>, y buscar la orden de compra en la opción: Lista checklist recepción.<br><hr>Saludos.', 1);
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(21, 'CODIGO_SOLICITUD', '1', 1);
 
