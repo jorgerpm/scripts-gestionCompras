@@ -43,14 +43,14 @@ INSERT INTO parametro
 VALUES(9, 'ASUNTOMAIL_SC', 'Solicitud de cotizacion provedor', 1);
 INSERT INTO parametro
 (id, nombre, valor, idEstado)
-VALUES(10, 'MENSAJEMAIL_SC', 'Estimado [razonSocialProveedor], <br>A continuación se solicita una cotización.<br>Para acceder a la solicitud de cotización, por favor ingrese al siguiente link <a href="[url]">[url]</a><br>Deberá acceder al portal con su usuario y clave, si es el caso de no estar registrado en el portal, deberá registrar sus datos dentro del mismo link.<br><hr>Saludos.', 1);
+VALUES(10, 'MENSAJEMAIL_SC', 'Estimado proveedor, <br>A continuación se solicita una cotización.<br>Para acceder a la solicitud de cotización, por favor ingrese al siguiente link <a href="[url]">[url]</a><br>Deberá acceder al portal con su usuario y clave, si es el caso de no estar registrado en el portal, deberá registrar sus datos dentro del mismo link.<br><hr>Saludos.', 1);
 INSERT INTO parametro (id,nombre,valor,idestado) VALUES (11,'IP_SISTEMA','http://localhost:9090/php-gestionCompras/',1);
-INSERT INTO parametro (id,nombre,valor,idestado) VALUES (12,'PATH_REPORTES','/home/jorge/nifa/',1);
+INSERT INTO parametro (id,nombre,valor,idestado) VALUES (12,'PATH_REPORTES','/reportes/',1);
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(13, 'ASUNTOMAIL_OC_APR', 'Cotización / OC aprobada', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
-VALUES(14, 'MENSAJEMAIL_OC_APR', 'Estimado proveedor, <br>Su cotización con número de solicitud: [codigoSolicitud], ha sido aprobada.<br><hr>Saludos.', 1);
-INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(15, 'MAILS_OC_APR', 'jorge.ponce@idebsystems.com', 1);
+VALUES(14, 'MENSAJEMAIL_OC_APR', 'Estimado [razonSocial], <br>Su cotización con número de solicitud: [codigoSolicitud], ha sido aprobada.<br><hr>Saludos.', 1);
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(15, 'MAILS_OC_APR', 'mail@mail.com', 1);
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(16, 'ASUNTOMAIL_APROBADORES', 'Orden de compra para su aprobación', 1);
 INSERT INTO parametro (id, nombre, valor, idEstado) 
@@ -63,10 +63,19 @@ VALUES(20, 'MENSAJEMAIL_CHECKLIST_RECEPCION', 'Estimado [nombreUsuario], <br>Se 
 
 INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(21, 'CODIGO_SOLICITUD', '1', 1);
 
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(22, 'ASUNTOMAIL_NUEVA_COT', 'Nueva cotización registrada', 1);
+INSERT INTO parametro (id, nombre, valor, idEstado) 
+VALUES(23, 'MENSAJEMAIL_NUEVA_COT', 'Estimados, <br>Se ha registrado una nueva cotización con código de solicitud: [codigoSolicitud]. La cotización fue registrada por el proveedor [razonSocial].<br><hr>Saludos.', 1);
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(24, 'EMAILS_COTIZACION_REG', 'mail@mail.com', 1);
+
+INSERT INTO parametro (id, nombre, valor, idEstado) VALUES(25, 'ASUNTOMAIL_NUEVO_PROV', 'Registro de un nuevo proveedor', 1);
+INSERT INTO parametro (id, nombre, valor, idEstado) 
+VALUES(26, 'MENSAJEMAIL_NUEVO_PROV', 'Estimados, <br>Se ha registrado un nuevo proveedor en el sistema con ruc: [ruc], razón social:  [razonSocial].<br><hr>Saludos.', 1);
+
 
 
 -- colocar la secuencia de parametros en el siguiente que corresponde
-ALTER SEQUENCE public.parametro_id_seq RESTART 21;
+ALTER SEQUENCE public.parametro_id_seq RESTART 26;
 
 
 insert into estado (id, nombre) values (1, 'ACTIVO');
