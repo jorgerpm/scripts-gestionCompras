@@ -5,6 +5,7 @@ CREATE TABLE rol
    principal boolean NOT NULL,
    idEstado BIGINT not null,
    cheklist_recepcion boolean NOT NULL default false,
+   autorizador bool NOT NULL DEFAULT false,
    PRIMARY KEY (id)
 );
 
