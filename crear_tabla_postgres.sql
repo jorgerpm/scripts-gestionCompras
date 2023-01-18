@@ -192,6 +192,7 @@ iva numeric(9,2) not null,
 total numeric(9,2) not null,
 descuento numeric(9,2) not null default 0,
 forma_pago text,
+unidad_negocio_rc text;
 usuario_modifica text,
 fecha_modifica timestamp,
 CONSTRAINT orden_compra_pkey PRIMARY KEY (id),
@@ -202,6 +203,7 @@ create table orden_compra_detalle(
 id bigserial not null,
 id_orden_compra bigint not null,
 cantidad int not null,
+codigo_producto text,
 detalle text not null,
 valor_unitario numeric(9,2) not null,
 valor_total numeric(9,2) not null,
@@ -273,6 +275,7 @@ create table check_list_recepcion(
 	fecha_recepcion_bodega timestamp,
 	codigo_material text,
 	cantidad_recibida integer,
+	monto_total_factura numeric(9,2),
 	usuario_modifica text,
 	fecha_modifica timestamp,
 	PRIMARY KEY (id)
@@ -287,6 +290,7 @@ create table check_list_recepcion_detalle(
 	respuesta text,
 	fecha timestamp,
 	observacion text,
+	campos_bodega text,
 	PRIMARY KEY (id)
 );
 
