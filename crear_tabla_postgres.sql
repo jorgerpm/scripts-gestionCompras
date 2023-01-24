@@ -276,6 +276,7 @@ create table check_list_recepcion(
 	codigo_material text,
 	cantidad_recibida integer,
 	monto_total_factura numeric(9,2),
+	fecha_aprobacion_artes timestamp,
 	usuario_modifica text,
 	fecha_modifica timestamp,
 	PRIMARY KEY (id)
@@ -291,6 +292,7 @@ create table check_list_recepcion_detalle(
 	fecha timestamp,
 	observacion text,
 	campos_bodega text,
+	fecha_aprobacion_artes text,
 	PRIMARY KEY (id)
 );
 
