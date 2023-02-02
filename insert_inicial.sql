@@ -92,14 +92,15 @@ INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (8, 'Orden s
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (9, 'Solicitud cotización', 'solicitudCotizacion', 'fa-calculator', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (10, 'Formulario cotización', 'formularioCotizacion', 'fa-calculator', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (11, 'Forma pago', 'formaPago', 'fa-credit-card', 1, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (12, 'Lista de solicitudes', 'listaSolicitudes', '', null, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (13, 'Lista de cotizaciones', 'listaCotizaciones', '', null, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (14, 'Lista de orden de compra', 'listaOrdenesCompra', '', null, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (15, 'Histórico de documentos', 'listaHistoricoDocumentos', '', null, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (16, 'Ordenes por autorizar', 'listaOrdenesPorAutorizar', '', null, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (17, 'Lista de comparativos', 'listaComparativos', '', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (12, 'Lista de solicitudes', 'listaSolicitudes', 'fa-list-ul', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (13, 'Lista de cotizaciones', 'listaCotizaciones', 'fa-tasks', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (14, 'Lista de orden de compra', 'listaOrdenesCompra', 'fa-tasks', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (15, 'Histórico de documentos', 'listaHistoricoDocumentos', 'fa-list-ul', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (16, 'Ordenes por autorizar', 'listaOrdenesPorAutorizar', 'fa-tasks', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (17, 'Lista de comparativos', 'listaComparativos', 'fa-list-ul', null, 1);
 INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (18, 'Registrar preguntas', 'preguntasCheckList', 'fa-question-circle-o', 1, 1);
-INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (19, 'Lista checkList recepción', 'listaCheckListRecepcion', '', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (19, 'Lista checkList recepción', 'listaCheckListRecepcion', 'fa-list-ul', null, 1);
+INSERT INTO menu(id, titulo, link, imagen, idMenu, idEstado) VALUES (20, 'CheckList por completar', 'listaCheckListPorCompletar', 'fa-tasks', null, 1);
 
 
 insert into menurol(idrol, idmenu) values (1, 1);
@@ -121,4 +122,5 @@ insert into menurol(idrol, idmenu) values (1, 16);
 insert into menurol(idrol, idmenu) values (1, 17);
 insert into menurol(idrol, idmenu) values (1, 18);
 insert into menurol(idrol, idmenu) values (1, 19);
+insert into menurol(idrol, idmenu) values (1, 20);
 
