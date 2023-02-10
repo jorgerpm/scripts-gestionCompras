@@ -122,6 +122,7 @@ id bigserial not null,
 id_solicitud bigint not null,
 cantidad int not null,
 detalle text not null,
+path_archivo text,
 CONSTRAINT solicitud_detalle_pkey PRIMARY KEY (id)
 );
 
