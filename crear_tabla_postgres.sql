@@ -193,6 +193,7 @@ iva numeric(9,2) not null,
 total numeric(9,2) not null,
 descuento numeric(9,2) not null default 0,
 forma_pago text,
+detalle_final text,
 unidad_negocio_rc text;
 usuario_modifica text,
 fecha_modifica timestamp,
